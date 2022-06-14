@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks | Rewards </title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+
+            $(".toggle").on("click", function () {
+
+                //if the item already has the class acive, this function takes it away
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+
+                }
+                // otherwise, it will add the class of active
+                else {
+
+                    $(".item").addClass("active");
+                }
+            })
+
+        });
+
+
+        window.onscroll = function () {
+
+            myFunction()
+
+
+        }; //when the user scrolls the page , execute this function
+
+
+
+        // this variable is to get the header that we want to target
+
+        var header = document.getElementById("menu");
+
+
+        // this gets the offset poisition of the navbar
+        var sticky = menu.offsetTop;
+
+
+        // adds the sticky class to the header when user reachers the scroll position. This function also removes sticky when leaving the scroll position
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                menu.classList.add("sticky");  // if the user is scrolling, this function is ensuring that the header is sticky when scrolling. It is adding the class "sticky" which as been declared in CSS already, when the user STARTS to scroll
+            } else {
+                menu.classList.remove("sticky"); // this means, if the user is NOT scrolling, remove the sticky CSS declaration. 
+            };
+        };
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <header>
+
+
+
+        <nav>
+            <div class="sticky">
+                <ul class="menu">
+                    <li class="logo"><a href="#"><img src="images/starbucks (3).png" alt="" id="starbucks-logo"></a>
+                    </li>
+                    <li class="item left-nav"><a href="#">Menu</a></li>
+                    <li class="item rewards left-nav"><a href="#">Rewards</a></li>
+                    <li class="item left-nav"><a href="#">Gift Cards</a></li>
+                    <li class="item"><img src="images/location-pin.png" alt="" id="location-pin"><a href="#">Find a
+                            Store</a></li>
+                    <li class="item button"><a href="#">Sign in</a></li>
+                    <li class="item button secondary"><a href="#">Join now</a></li>
+                    <li class="toggle"><a href="#"><span class="bars"></span></a></li>
+                </ul>
+        </nav>
+
+        <nav>
+            <!----dark green navbar across the screen-->
+            <div class="rewards-container">
+                <div>
+                    <p>STARBUCKS REWARDS</p>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section>
+            <!---- -->
+            <div id="join-container">
+
+                <div class="text-container">
+                    <h1>FREE COFFEE<br>
+                        IS A TAP AWAY</h1>
+                    <p>Join now to start earning Rewards</p>
+                    <button>Join now</button>
+                    <p>Or <span>join the app</span> for the best experience</p>
+
+                </div>
+
+
+                <img src="images/star-img.png" alt="" class="star-img">
+            </div>
+
+        </section>
+        <!------------>
+
+
+
+
+        <article>
+
+
+
+            <!----how to earn stars section---->
+
+            <div class="get-started">
+                <h1>Getting started is easy</h1>
+                <p>Earn Stars and get rewarded in a few easy steps</p>
+
+
+                <!--- circle step 1--->
+                <div class="icons">
+                    <div class="icon-circle"><img src="Images/icon-1.png" alt="">
+                        <h3>Create an account</h3>
+                        <p>To get started, join now. You can also join in the<br>
+                            app to get access to the full range of Starbucks<br>
+                            Rewards benefits.
+                        </p>
+
+                    </div>
+
+                    <!--- circle step 2--->
+                    <div class="icon-circle"><img src="Images/icon-2.png">
+                        <h3>Order and pay how you'd like</h3>
+                        <p> Use cash, credit/debit card or save some time and<br>
+                            pay right through the app. You'll collect Stars all<br>
+                            ways. Learn how
+                        </p>
+                    </div>
+
+
+                    <!--- circle step 3--->
+                    <div class="icon-circle"><img src="images/icon-3.png" alt="">
+                        <h3>Earn Stars, get Rewards</h3>
+                        <p> As you earn Stars, you can redeem them for<br>
+                            Rewards-like free food, drinks, and more. Start<br>
+                            redeeming with as little as 25 Stars!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!----section -->
+
+
+            <!------>
+
+
+            <!---STARS REWARDS---->
+
+            <div class="tab">
+                <!----the tab that contains everything inside-->
+
+
+
+                <div class="offers-container">
+                    <h2>
+                        Get your favourites for free
+                    </h2>
+
+
+                    <div class="button-container">
+                        <!---container that holds all of the buttons-->
+
+
+
+
+
+                        <!---25 points button -->
+                        <button id="point-25">
+
+                            25<img src="images/filled-star.png" alt="" class="filled-star">
+                        </button>
+
+
+
+
+                        <!---50 points button -->
+                        <button id="point-50">
+                            50<img src="images/filled-star.png" alt="" class="filled-star">
+                        </button>
+
+
+
+
+
+                        <!---150 points button -->
+                        <button id="point-150">
+                            150<img src="images/filled-star.png" alt="" class="filled-star">
+                        </button>
+
+
+
+
+                        <!---200 points button -->
+                        <button id="point-200">
+                            200<img src="images/filled-star.png" alt="" class="filled-star">
+                        </button>
+
+
+
+
+
+                        <!---400 points button -->
+                        <button id="point-400">
+                            400<img src="images/filled-star.png" alt="" class="filled-star">
+                        </button>
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="toggle-container">
+
+
+                    <!---toggle menu/option 1-->
+
+                    <div id="customize-drink">
+                        <!---image within the menu-->
+                        <div class="image-box">
+                            <img src="images/coffee-img1.png" alt="">
+                        </div>
+
+
+                        <!---text within the box-->
+                        <div class="text-box">
+                            <h3>Customize your drink</h3>
+                            <p>Make your drink just right with an extra<br>
+                                espresso shot, dairy substitute or a dash of<br>
+                                your favourite syrup.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </article>
+
+
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
