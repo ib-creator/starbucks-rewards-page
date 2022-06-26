@@ -8,6 +8,16 @@
 }
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #27322a;
+}
+
 html,
 body {
     width: 100%;
@@ -15,6 +25,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -225,6 +236,9 @@ li a:hover {
 /* toggle different rewards section */
 
 
+.about {
+    margin-bottom: -50px;
+}
 
 .offers-container h2 {
     text-align: center;
@@ -241,7 +255,26 @@ li a:hover {
     background-color: #e7f5f1;
     height: 265px;
     width: 100%;
+    border-bottom: 1px #bbbbbb solid;
+
 }
+
+
+.points-tab {
+    display: none;
+}
+
+
+.points-tab.active {
+    display: flex;
+    justify-content: center;
+    gap: 95px;
+
+}
+
+
+
+
 
 
 
@@ -258,11 +291,7 @@ li a:hover {
 /* the buttons*/
 
 
-#point-25,
-#point-50,
-#point-150,
-#point-200,
-#point-400 {
+.points-btn {
     background-color: transparent;
     border: 0px;
     padding: 19px;
@@ -270,9 +299,6 @@ li a:hover {
     cursor: pointer;
 }
 
-.offers-btn:hover {
-    text-decoration: underline;
-}
 
 
 
@@ -293,15 +319,136 @@ li a:hover {
 .toggle-container {
     background-color: #d4e9e2;
     width: 100%;
-    height: 220px;
-    margin-top: -21px;
+    height: 299px;
+    padding: 67px;
+    margin-top: -20px;
+
 }
+
+
+
 
 /* first menu option */
 
-#customize-drink {
+
+/* the points 25 is the 25 points menu tab */
+
+
+
+
+
+.text-box {
+    margin-top: 45px;
+}
+
+.text-box h3 {
+    font-size: 27px;
+    letter-spacing: 1px;
+    margin-bottom: 19px;
+    color: #27322a;
+}
+
+.text-box p {
+    font-size: 19px;
+}
+
+
+
+
+
+/* extras section */
+
+.extras-container {
+    text-align: center;
+    padding: 194px;
+}
+
+.extras-container p {
+    margin-bottom: 53px;
+    font-size: 20px;
+}
+
+.extras-container h2 {
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+.imgs-container {
     display: flex;
     justify-content: center;
+    justify-content: space-around;
+    gap: 34px;
+}
+
+
+/* the title section*/
+
+.extra-header {
+    display: flex;
+    justify-content: space-around;
+    gap: 0px;
+}
+
+
+.extras-info {
+    display: inline-flex;
+    gap: 168px;
+
+}
+
+.extra-header h4 {
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+
+.extras-info p {
+    font-size: 18px;
+}
+
+/* the descriptions under the images/icons describing the extra rewards */
+
+.extras-info p {
+    display: inline-flex;
+}
+
+
+
+/* cash or card section*/
+
+.cash-card-headers {
+
+    background-color: #f2f0eb;
+    height: 750px;
+    width: 100%;
+    font-size: 19px;
+}
+
+.cash-card-container {
+    margin-bottom: 112px;
+}
+
+#center {
+    text-align: center;
+    margin-bottom: 104px;
+}
+
+.cash-card-headers>h3:first-child {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 29px;
+}
+
+
+
+/* the title headers within the colums */
+
+.header-columns {
+    margin-top: 32px;
+    margin-left: 2em;
+}
+
+.header-columns h3 {
+    margin-bottom: 13px;
 }
 
 
@@ -309,35 +456,186 @@ li a:hover {
 
 
 
+/* Grid container */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-left: 227px;
+}
+
+.cell-1,
+.cell-2,
+.cell-3,
+.cell-4,
+.cell-5,
+.cell-6 {
+    display: flex;
+}
+
+
+.cell-2,
+.cell-5 {
+    margin-left: -16em;
+}
+
+.cell-3,
+.cell-6 {
+    margin-left: -20em;
+}
+
+
+
+
+/* starcodes section */
+
+.star-codes {
+    padding-left: 32em;
+}
+
+.star-codes h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.star-codes p {
+    margin-bottom: 33px;
+}
 
 
 
 
 
+/* star codes form section */
+
+.form {
+    position: relative;
+    width: 20rem;
+    margin-left: 32rem;
+
+}
+
+.form__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    width: 228%;
+    height: 100%;
+    border: 2px solid grey;
+    font-family: inherit;
+    border-radius: 10px;
+}
+
+.form__label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.form__input:focus {
+    border-color: #016438;
+}
+
+
+/* submit button*/
+
+.submit-btn {
+    position: absolute;
+    display: flex;
+    margin-left: 41rem;
+    top: 4rem;
+    padding: 10px;
+    border-radius: 26px;
+    width: 24%;
+    font-size: 14px;
+    background-color: transparent;
+    color: #0c1714;
+    border-color: #0c1714;
+    cursor: pointer;
+}
 
 
 
 
+/* questions section */
+
+.questions-section {
+    position: relative;
+    left: 32rem;
+    top: 8rem;
+}
+
+.questions-section h3 {
+    font-size: 24px;
+}
 
 
 
 
+/* terms section */
+
+.terms-container {
+    display: flex;
+    margin-top: 19rem;
+    padding-left: 21rem;
+    gap: 53px;
+    background-color: #f9f9f9;
+    padding-top: 87px;
+    padding-bottom: 86px;
+}
 
 
 
+/* footer section*/
+
+.footer-container {
+    display: flex;
+    gap: 4rem;
+    padding-left: 21rem;
+    padding-top: 3rem;
+}
+
+.footer-container ul {
+    line-height: 3rem;
+}
 
 
+.footer-container h5 {
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+.footer-container li {
+    color: grey;
+    cursor: pointer;
+}
+
+.footer-container li:hover {
+    color: black;
+}
 
 
+.footer-icons {
+    display: flex;
+    gap: 34px;
+    padding-left: 20rem;
+    margin-bottom: 21px;
+}
 
 
+.icons-png {
+    width: 157%;
+    height: auto;
+}
 
+.policy-container {
+    display: flex;
+    padding-left: 20rem;
+    gap: 39px;
 
-
-
-
-
-
+}
 
 
 
@@ -401,6 +699,26 @@ li a:hover {
 .bars::after {
     top: -5px;
 }
+
+
+
+/* MEDIA queries mobile */
+
+@media all and (max-width: 767px) {
+    .text-container {
+        padding: 162px;
+    }
+
+    .text-container>br {
+
+        display: none;
+    }
+
+}
+
+
+
+
 
 
 
@@ -498,45 +816,3 @@ li a:hover {
     }
 
 }
-
-
-
-/* NAVBAR
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-}
-
-
-.left-nav {
-    margin-right: auto;
-}
-
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li a {
-    font-weight: 900;
-}
-
-.nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav-links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover {
-    color: #aec2bb;
-}
-
-
-#location-pin {
-    width: 20%;
-    height: 24px;
-} */
