@@ -6,7 +6,7 @@ const btns = document.querySelectorAll(".points-btn");
 
 
 // the div article that covers the entire rewards section i.e the parent container 
-const about = document.querySelector(".toggle-container");
+const about = document.querySelector(".about");
 
 
 
@@ -22,12 +22,6 @@ about.addEventListener("click", function (e) {
 
     const id = e.target.dataset.id; // this is to target the id that I have added in the html. Each button AND each div has a dataset ID which we need to retrieve using this method
 
-
-
-
-
-
-
     // here I have set up an IF statement to say. If i am clicking on a button with the ID, I want to display a certain div with the images, description etc
 
 
@@ -36,13 +30,12 @@ about.addEventListener("click", function (e) {
     if (id) {
         // remove active from other buttons - "for each button that does not have the id that matches, remove active"
         //for each button - i.e. for every button, run this function 
-        btns.forEach(function (btn) {
+        btns.forEach(function (btns) {
 
-            btn.classList.remove("active");
-            e.target.classList.add("active");
+            btns.classList.remove("active");
 
         });
-
+        e.target.classList.add("active");
         // hide the other reward tabs 
         tabs.forEach(function (tabs) {
             tabs.classList.remove("active");
