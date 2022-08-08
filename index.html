@@ -10,13 +10,31 @@
     <script defer src="jsscript.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script>
+        $(function () {
 
+            $(".toggle").on("click", function () {
 
+                //if the item already has the class acive, this function takes it away
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+
+                }
+                // otherwise, it will add the class of active
+                else {
+
+                    $(".item").addClass("active");
+                }
+            })
+
+        });
+    </script>
 </head>
 
 
 
 <body>
+
 
 
     <header>
