@@ -354,6 +354,14 @@ li a:hover {
 
 
 
+/* instructions */
+
+.instructions {
+    display: flex;
+    gap: 223px;
+    margin-right: 1rem;
+}
+
 
 
 /* extras section */
@@ -783,6 +791,7 @@ li a:hover {
 
     .points-btn {
         display: flex;
+
     }
 
 
@@ -927,39 +936,39 @@ li a:hover {
         padding-left: 1rem;
     }
 
+}
 
 
 
+/* tablets */
 
-    /* tablets */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    .item .left-nav {
+        padding: -3px 10px;
+    }
 
-    @media all and (min-width: 768px) and (max-width: 1023px) {
-        .item .left-nav {
-            padding: -3px 10px;
-        }
+    .menu {
+        margin-left: -87px;
+    }
 
-        .menu {
-            margin-left: -87px;
-        }
-
-        .menu li {
-            font-size: 13px;
-        }
-
-
-        .text-container {
-            display: flex;
-        }
-
+    .menu li {
+        font-size: 13px;
     }
 
 
-
-
-
-
+    .text-container {
+        display: flex;
+    }
 
 }
+
+
+
+
+
+
+
+
 
 
 
