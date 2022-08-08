@@ -714,6 +714,9 @@ li a:hover {
 
 @media all and (max-width: 767px) {
 
+    .instructions {
+        display: block;
+    }
 
 
     .menu {
@@ -786,7 +789,7 @@ li a:hover {
     .button-container {
         display: flex;
         justify-content: center;
-        gap: 7px;
+        gap: 0px;
     }
 
     .points-btn {
@@ -795,9 +798,13 @@ li a:hover {
     }
 
 
-    .points-tab .active {
+    .points-tab.active {
         display: block;
         gap: 0px;
+    }
+
+    .points-tab {
+        display: none;
     }
 
     .item.rewards {
@@ -815,7 +822,7 @@ li a:hover {
     .toggle-container {
         background-color: #d4e9e2;
         width: 100%;
-        height: 429px;
+        height: 495px;
         padding: 67px;
         margin-top: -20px;
     }
@@ -851,7 +858,7 @@ li a:hover {
     }
 
     .header-columns {
-        font-size: 10px;
+        font-size: 12px;
     }
 
 
